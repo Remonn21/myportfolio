@@ -35,6 +35,16 @@ const Projects = [
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores in provident distinctio recusandae natus mollitia quidem totam aperiam dolores numquam, rerum perferendis praesentium.",
   },
+  {
+    title: "E-commerece",
+    href: "/",
+    gitHub: "/",
+    tags: ["react", "node.js", "mongoDB", "stripe"],
+    imageUrl:
+      "https://res.cloudinary.com/upwork-cloud/image/upload/c_scale,w_1000/v1709147758/catalog/1598229736060620800/y8qkfd7nbovlkxjntkmj.webp",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores in provident distinctio recusandae natus mollitia quidem totam aperiam dolores numquam, rerum perferendis praesentium.",
+  },
 ];
 
 const Myprojects = () => {
@@ -90,7 +100,10 @@ const Myprojects = () => {
           exercitationem iste tempora, cupiditate pariatur ducimus excepturi earum labore
         </motion.p>
       </div>
-      <div ref={projectsRef} className="flex flex-col md:flex-row gap-4 md:gap-8">
+      <div
+        ref={projectsRef}
+        className="grid sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4"
+      >
         {Projects.map((project, index) => (
           <motion.div
             variants={fadeIn("up", (index / 10) * 2)}
