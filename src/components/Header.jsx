@@ -10,7 +10,7 @@ const links = [
     name: "Home",
     path: "home",
     MobIcon: <FaHome className="text-2xl" />,
-    offset: -200,
+    offset: -100,
   },
   {
     name: "Resume",

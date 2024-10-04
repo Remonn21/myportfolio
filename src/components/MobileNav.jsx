@@ -3,8 +3,8 @@ import { Link } from "react-scroll";
 const MobileNav = ({ links }) => {
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 bg-black/55
-     min-w-full h-[75px] backdrop-blur-lg shadow-md flex justify-between px-5 pt-2 items-center"
+      className="fixed bottom-0 left-0 right-0 bg-black/15
+     min-w-full h-[75px] z-50 backdrop-blur-2xl shadow-md flex justify-between px-5 pt-2 items-center"
     >
       {links.map((item, index) => (
         <Link
