@@ -5,6 +5,7 @@ import Stats from "../components/Stats";
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { TypeAnimation } from "react-type-animation";
 const About = () => {
   return (
     <section id="home" name="home" className="h-full">
@@ -24,7 +25,24 @@ const About = () => {
             <br />
           </span>
           <h1 className="h1 -ml-1 mb-1 text-accent">Remon Ehab</h1>
-          <h2 className="h3 mb-6">Full-stack developer</h2>
+          <h2 className="h3 capitalize  min-h-12">
+            {" "}
+            <TypeAnimation
+              sequence={[
+                "Full-stack Developer",
+                2000,
+                "backend developer",
+                2000,
+                "problem solver",
+                2000,
+              ]}
+              speed={50}
+              wrapper="span"
+              repeat={Infinity}
+              cursor={false}
+            />
+          </h2>
+
           <p className="max-w-[500px] mb-9 text-white/90">
             I excel at crafting elegant digital experience and I am proficient in various
             programing langugaes and technologies

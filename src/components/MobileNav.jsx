@@ -16,7 +16,7 @@ const MobileNav = ({ links }) => {
           duration={500}
           activeClass=" rounded-full bg-accent/80"
           className="capitalize font-medium hover:text-accent-hover cursor-pointer
-           transition-all flex flex-col items-center px-3 py-[2px]"
+           transition-all flex flex-col items-center px-3 py-[4px] pt-2"
         >
           {item.MobIcon}
           <span className="-mt-[3px]">{item.name}</span>

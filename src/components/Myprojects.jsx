@@ -86,7 +86,9 @@ const Myprojects = () => {
           whileInView={"show"}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <h3 className="text-white/60 uppercase tracking-wide text-lg mb-4">My work</h3>
+          <h3 className="text-white/60 uppercase tracking-wide text-lg mb-4 text-accent">
+            My work
+          </h3>
           <h2 className="h2 font-extrabold tracking-tighter">Projects.</h2>
         </motion.div>
         <motion.p

@@ -45,10 +45,10 @@ const Contact = () => {
         /> */}
 
         <form className="flex flex-col gap-4 z-20" action="">
-          <h1 className="text-accent text-4xl font-thin mb-3">
+          <h1 className="text-accent text-xl font-semibold md:text-4xl md:font-thin mb-3">
             Let&apos;s work together
           </h1>
-          <p className="text-white/60">
+          <p className="text-white/60 leading-snug">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. In dicta velit
             tenetur labore hic nobis, voluptates aspernatur. Magni suscipit cupiditate
           </p>
@@ -90,7 +90,7 @@ const Contact = () => {
           </Button>
         </form>
       </motion.div>
-      <div className="relative overflow-x-hidden">
+      <div className="relative overflow-x-hidden flex-1 flex">
         <motion.div
           variants={fadeIn("left")}
           initial="hidden"
