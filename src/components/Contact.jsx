@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-import { FormItem, FormLabel } from "./ui/form";
+import { FormItem } from "./ui/form";
 import { Input } from "./ui/input";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdMail } from "react-icons/md";

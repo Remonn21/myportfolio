@@ -1,5 +1,5 @@
 import { VscGithub } from "react-icons/vsc";
-import { Button } from "./ui/button";
+// import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/variants";
 
@@ -62,42 +62,44 @@ const Myprojects = () => {
           exercitationem iste tempora, cupiditate pariatur ducimus excepturi earum labore
         </motion.p>
       </div>
-      <div className="flex flex-col md:flex-row gap-6">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-8">
         {Projects.map((project, index) => (
           <motion.div
             variants={fadeIn("up", (index / 10) * 2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: true, amount: 0.5 }}
-            className="bg-tertiary rounded-lg shadow-md "
+            viewport={{ once: false, amount: 0.5 }}
+            className=""
             key={index}
           >
-            <div className="m-3 overflow-hidden relative group">
-              <div
-                className="absolute  opacity-0 group-hover:opacity-100 z-20 bg-black/50 inset-0
+            <div className="bg-tertiary rounded-lg p-4  hover:shadow-custom hover:scale-105 hover:-translate-y-5 transition ">
+              <div className="mb-3 overflow-hidden relative group">
+                <div
+                  className="absolute  opacity-0 group-hover:opacity-100 z-20 bg-black/50 inset-0
                rounded-lg flex justify-center items-center"
-              >
-                <Button className="rounded-md px-4 bg-accent/60">View details</Button>
-              </div>
+                >
+                  {/* <Button className="rounded-md px-4 bg-accent/60">View details</Button> */}
+                </div>
 
-              <div className="absolute top-2 right-2 p-2 z-20 bg-black/80 cursor-pointer rounded-full hover:bg-black hover:scale-110 transition duration-300">
-                <VscGithub className="text-xl" />
+                <div className="absolute top-2 right-2 p-2 z-20 bg-black/80 cursor-pointer rounded-full hover:bg-black hover:scale-110 transition duration-300">
+                  <VscGithub className="text-xl" />
+                </div>
+                <img
+                  src={project.imageUrl}
+                  className="rounded-lg group-hover:scale-125 transition duration-300"
+                  alt=""
+                />
               </div>
-              <img
-                src={project.imageUrl}
-                className="rounded-lg group-hover:scale-125 transition duration-300"
-                alt=""
-              />
-            </div>
-            <div className="flex flex-col gap-2 p-3">
-              <h3 className="h3 tracking-tighter">{project.title}</h3>
-              <p className="text-white/60 text-sm">{project.description}</p>
-              <div className="flex gap-2">
-                {project.tags.map((tag) => (
-                  <span key={tag} className="text-accent text-xs my-4">
-                    #{tag}
-                  </span>
-                ))}
+              <div className="flex flex-col gap-2 py-2">
+                <h3 className="h3 tracking-tighter">{project.title}</h3>
+                <p className="text-white/60 text-sm">{project.description}</p>
+                <div className="flex gap-2">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="text-accent text-xs my-4">
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>

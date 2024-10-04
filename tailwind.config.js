@@ -17,6 +17,9 @@ export default {
         hovercolor: "#00ffee",
         dark: "#27272c",
       },
+      boxShadow: {
+        custom: "0 0 20px #00ffee",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
