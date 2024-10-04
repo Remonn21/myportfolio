@@ -28,7 +28,7 @@ const contactInfo = [
 
 const Contact = () => {
   return (
-    <div className="flex flex-col gap-10 md:gap-0 md:flex-row">
+    <div id="contact" className="flex flex-col gap-10 md:gap-5 md:flex-row">
       <motion.div
         variants={fadeIn("right")}
         initial="hidden"
@@ -90,29 +90,31 @@ const Contact = () => {
           </Button>
         </form>
       </motion.div>
-      <motion.div
-        variants={fadeIn("left")}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.3 }}
-        className="flex-1 order-1 md:order-none flex md:justify-center items-center"
-      >
-        <div className="flex flex-col gap-5">
-          {contactInfo.map((item) => (
-            <div key={item.title}>
-              <div className="flex gap-5">
-                <div className="bg-[#27272c] px-3 flex items-center justify-center rounded-md">
-                  {item.icon}
-                </div>
-                <div>
-                  <p className="text-white/60 text-xs mb-1">{item.title}</p>
-                  <p className="text-sm">{item.content}</p>
+      <div className="relative overflow-x-hidden">
+        <motion.div
+          variants={fadeIn("left")}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.3 }}
+          className=" flex-1 order-1 md:order-none flex md:justify-center items-center"
+        >
+          <div className="flex flex-col gap-5">
+            {contactInfo.map((item) => (
+              <div key={item.title}>
+                <div className="flex gap-5">
+                  <div className="bg-[#27272c] px-3 flex items-center justify-center rounded-md">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <p className="text-white/60 text-xs mb-1">{item.title}</p>
+                    <p className="text-sm">{item.content}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 };

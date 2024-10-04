@@ -38,7 +38,7 @@ const Projects = [
 
 const Myprojects = () => {
   return (
-    <div>
+    <div id="work">
       <div className="flex flex-col items-center md:items-start gap-4 mb-12">
         {/* <div className="absolute inset-0"> */}
         {/* </div> */}
