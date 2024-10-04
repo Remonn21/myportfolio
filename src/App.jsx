@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <Routes basename="/myportfolio">
+    <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
       </Route>
