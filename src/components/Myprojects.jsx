@@ -2,7 +2,6 @@ import { VscGithub } from "react-icons/vsc";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/variants";
-import { LampContainer } from "./ui/lamp";
 
 const Projects = [
   {

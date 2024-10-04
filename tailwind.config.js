@@ -14,7 +14,7 @@ export default {
           hover: "#00e187",
         },
         tertiary: "#151030",
-
+        hovercolor: "#00ffee",
         dark: "#27272c",
       },
       borderRadius: {
