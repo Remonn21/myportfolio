@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { FaCode } from "react-icons/fa";
 import { FaTachometerAlt } from "react-icons/fa";
 import { GiNetworkBars } from "react-icons/gi";
-// import { Button as MovingBorder } from "./ui/moving-border";
 import { BackgroundGradient } from "./ui/background-gradient";
 import { useEffect, useRef, useState } from "react";
 const services = [
