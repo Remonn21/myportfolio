@@ -2,6 +2,7 @@ import { VscGithub } from "react-icons/vsc";
 // import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/variants";
+import { useEffect, useRef, useState } from "react";
 
 const Projects = [
   {
@@ -37,9 +38,36 @@ const Projects = [
 ];
 
 const Myprojects = () => {
+  const projectsRef = useRef(null);
+
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (projectsRef.current) {
+      observer.observe(projectsRef.current);
+    }
+
+    return () => {
+      if (projectsRef.current) {
+        observer.unobserve(projectsRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div id="work">
-      <div className="flex flex-col items-center md:items-start gap-4 mb-12">
+      <div className="flex flex-col items-start gap-4 mb-12">
         {/* <div className="absolute inset-0"> */}
         {/* </div> */}
         <motion.div
@@ -62,13 +90,12 @@ const Myprojects = () => {
           exercitationem iste tempora, cupiditate pariatur ducimus excepturi earum labore
         </motion.p>
       </div>
-      <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+      <div ref={projectsRef} className="flex flex-col md:flex-row gap-4 md:gap-8">
         {Projects.map((project, index) => (
           <motion.div
             variants={fadeIn("up", (index / 10) * 2)}
             initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.5 }}
+            animate={isVisible ? "show" : "hidden"}
             className=""
             key={index}
           >
