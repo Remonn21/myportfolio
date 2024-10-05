@@ -19,7 +19,7 @@ const services = [
     Icon: GiNetworkBars,
   },
   {
-    title: "Performance Optimization",
+    title: "Performance Optimization ",
 
     description:
       " I optimize web applications for speed and efficiency, ensuring fast load times and smooth performance through code optimization, lazy loading, and more",
