@@ -10,40 +10,27 @@ const Projects = [
     href: "/",
     gitHub: "/",
     tags: ["react", "node.js", "mongoDB", "stripe"],
-    imageUrl:
-      "https://res.cloudinary.com/upwork-cloud/image/upload/c_scale,w_1000/v1709147758/catalog/1598229736060620800/y8qkfd7nbovlkxjntkmj.webp",
+    imageUrl: "https://i.imgur.com/LvLq0Qc.png",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores in provident distinctio recusandae natus mollitia quidem totam aperiam dolores numquam, rerum perferendis praesentium.",
+      "A comprehensive and scalable e-commerce solution built with React.js and Node.js, featuring secure payment gateways (Stripe, PayPal), real-time product management, and a fully responsive design. Optimized for performance and user experience, the platform supports advanced search, filtering, and seamless order tracking, providing a robust foundation for businesses to grow their online presence.",
   },
   {
-    title: "E-commerece",
+    title: "Travel agency",
     href: "/",
     gitHub: "/",
     tags: ["react", "node.js", "mongoDB", "stripe"],
-    imageUrl:
-      "https://res.cloudinary.com/upwork-cloud/image/upload/c_scale,w_1000/v1709147758/catalog/1598229736060620800/y8qkfd7nbovlkxjntkmj.webp",
+    imageUrl: "https://i.imgur.com/6ppSTRb.png",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores in provident distinctio recusandae natus mollitia quidem totam aperiam dolores numquam, rerum perferendis praesentium.",
+      "A dynamic and feature-rich travel booking platform developed with React.js and Node.js, offering real-time search for destinations, travel packages, and secure online bookings. The platform is fully responsive, providing users with a seamless experience across devices, while offering integrated payment gateways, itinerary management, and booking confirmations.",
   },
   {
-    title: "E-commerece",
+    title: "Food ordering",
     href: "/",
     gitHub: "/",
-    tags: ["react", "node.js", "mongoDB", "stripe"],
-    imageUrl:
-      "https://res.cloudinary.com/upwork-cloud/image/upload/c_scale,w_1000/v1709147758/catalog/1598229736060620800/y8qkfd7nbovlkxjntkmj.webp",
+    tags: ["React.js", "express.js", "Stripe"],
+    imageUrl: "https://i.imgur.com/6y9algm.png",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores in provident distinctio recusandae natus mollitia quidem totam aperiam dolores numquam, rerum perferendis praesentium.",
-  },
-  {
-    title: "E-commerece",
-    href: "/",
-    gitHub: "/",
-    tags: ["react", "node.js", "mongoDB", "stripe"],
-    imageUrl:
-      "https://res.cloudinary.com/upwork-cloud/image/upload/c_scale,w_1000/v1709147758/catalog/1598229736060620800/y8qkfd7nbovlkxjntkmj.webp",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores in provident distinctio recusandae natus mollitia quidem totam aperiam dolores numquam, rerum perferendis praesentium.",
+      "A modern and intuitive food ordering platform built with React.js and Node.js, featuring seamless online ordering, secure payment integration (Stripe), and real-time order tracking. Fully responsive across devices, the platform offers a user-friendly experience for both customers and restaurant admins.",
   },
 ];
 
@@ -104,20 +91,20 @@ const Myprojects = () => {
       </div>
       <div
         ref={projectsRef}
-        className="grid sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4"
+        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4"
       >
         {Projects.map((project, index) => (
           <motion.div
             variants={fadeIn("up", (index / 10) * 2)}
             initial="hidden"
             animate={isVisible ? "show" : "hidden"}
-            className=""
+            className="flex"
             key={index}
           >
             <div className="bg-tertiary rounded-lg p-4  hover:shadow-custom hover:scale-105 hover:-translate-y-5 transition ">
               <div className="mb-3 overflow-hidden relative group">
                 <div
-                  className="absolute  opacity-0 group-hover:opacity-100 z-20 bg-black/50 inset-0
+                  className="absolute  opacity-0 group-hover:opacity-100 z-20 bg-black/50 scale-110 inset-0
                rounded-lg flex justify-center items-center"
                 >
                   {/* <Button className="rounded-md px-4 bg-accent/60">View details</Button> */}

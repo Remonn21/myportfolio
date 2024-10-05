@@ -49,8 +49,10 @@ const Contact = () => {
             Let&apos;s work together
           </h1>
           <p className="text-white/60 leading-snug">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In dicta velit
-            tenetur labore hic nobis, voluptates aspernatur. Magni suscipit cupiditate
+            I’m always excited to collaborate on innovative projects. Whether you’re
+            looking for a full-stack developer to bring your ideas to life, or need expert
+            support on your next big venture, I’m here to help. Let’s create something
+            amazing together—reach out and let’s start the conversation!
           </p>
           <div className="flex md:flex-row flex-col gap-5">
             <FormItem className="flex-1">

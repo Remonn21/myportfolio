@@ -2,30 +2,32 @@ import { Link } from "react-router-dom";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import { IoIosStats } from "react-icons/io";
-import { FaUser, FaHome } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
+import { MdMiscellaneousServices } from "react-icons/md";
 
 const links = [
   {
     name: "Home",
     path: "home",
-    MobIcon: <FaHome className="text-2xl" />,
+    MobIcon: FaHome,
     offset: -100,
   },
   {
-    name: "Resume",
-    path: "resume",
-    MobIcon: <FaUser className="text-xl" />,
+    name: "Services",
+    path: "services",
+    MobIcon: MdMiscellaneousServices,
+    iconClass: "text-2xl",
   },
   {
     name: "Work",
     path: "work",
-    MobIcon: <IoIosStats className="text-2xl" />,
+    MobIcon: IoIosStats,
   },
   {
     name: "contact",
     path: "contact",
-    MobIcon: <FaMessage className="text-xl" />,
+    MobIcon: FaMessage,
   },
 ];
 

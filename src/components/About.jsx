@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import { FiDownload } from "react-icons/fi";
 import Social from "../components/Social";
 import Photo from "../components/Photo";
@@ -7,6 +8,9 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { TypeAnimation } from "react-type-animation";
 const About = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.5,
+  });
   return (
     <section id="home" name="home" className="h-full">
       <motion.div
@@ -44,8 +48,9 @@ const About = () => {
           </h2>
 
           <p className="max-w-[500px] mb-9 text-white/90">
-            I excel at crafting elegant digital experience and I am proficient in various
-            programing langugaes and technologies
+            I build dynamic, high-performance web apps with clean code, scalable
+            solutions, and user-friendly designs. With full-stack expertise, I bring ideas
+            to life efficiently and innovatively.{" "}
           </p>
           <div className="flex flex-col md:flex-row items-center gap-8">
             <button
@@ -74,7 +79,9 @@ const About = () => {
           <Photo />
         </motion.div>
       </motion.div>
-      <Stats />
+      <div ref={ref}>
+        <Stats inView={inView} />
+      </div>
     </section>
   );
 };
