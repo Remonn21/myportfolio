@@ -1,5 +1,5 @@
 import { VscGithub } from "react-icons/vsc";
-import { Button } from "./ui/button";
+// import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/variants";
 import { useEffect, useRef, useState } from "react";
@@ -83,12 +83,12 @@ const Myprojects = () => {
                   className="absolute  opacity-0 group-hover:opacity-100 z-20 bg-black/50 scale-110 inset-0
                rounded-lg flex justify-center items-center"
                 >
-                  <Button
-                    className="rounded-md px-4 bg-accent/95"
+                  <button
+                    className="rounded-md px-4 hover:bg-tertiary transition bg-accent/95"
                     onClick={handleShowProject}
                   >
                     View details{" "}
-                  </Button>
+                  </button>
                 </div>
 
                 <div className="absolute top-2 right-2 p-2 z-20 bg-black/80 cursor-pointer rounded-full hover:bg-black hover:scale-110 transition duration-300">
