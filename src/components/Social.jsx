@@ -1,20 +1,23 @@
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { socials } from "@/config";
 import { Link } from "react-router-dom";
-
-const socials = [
-  { icon: <FaGithub />, path: "" },
-  { icon: <FaLinkedin />, path: "" },
-  { icon: <FaInstagram />, path: "" },
-];
 
 const Social = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
-      {socials.map((item, index) => (
-        <Link key={index} to={item.path} className={iconStyles}>
-          {item.icon}
-        </Link>
-      ))}
+      {socials.map((item, index) => {
+        const Icon = item.icon;
+        return (
+          <a
+            target="_blank"
+            href={item.path}
+            key={index}
+            to={item.path}
+            className={iconStyles}
+          >
+            <Icon />
+          </a>
+        );
+      })}
     </div>
   );
 };

@@ -3,36 +3,7 @@ import { VscGithub } from "react-icons/vsc";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/variants";
 import { useEffect, useRef, useState } from "react";
-
-const Projects = [
-  {
-    title: "E-commerece",
-    href: "/",
-    gitHub: "/",
-    tags: ["react", "node.js", "mongoDB", "stripe"],
-    imageUrl: "https://i.imgur.com/LvLq0Qc.png",
-    description:
-      "A comprehensive and scalable e-commerce solution built with React.js and Node.js, featuring secure payment gateways (Stripe, PayPal), real-time product management, and a fully responsive design. Optimized for performance and user experience, the platform supports advanced search, filtering, and seamless order tracking, providing a robust foundation for businesses to grow their online presence.",
-  },
-  {
-    title: "Travel agency",
-    href: "/",
-    gitHub: "/",
-    tags: ["react", "node.js", "mongoDB", "stripe"],
-    imageUrl: "https://i.imgur.com/6ppSTRb.png",
-    description:
-      "A dynamic and feature-rich travel booking platform developed with React.js and Node.js, offering real-time search for destinations, travel packages, and secure online bookings. The platform is fully responsive, providing users with a seamless experience across devices, while offering integrated payment gateways, itinerary management, and booking confirmations.",
-  },
-  {
-    title: "Food ordering",
-    href: "/",
-    gitHub: "/",
-    tags: ["React.js", "express.js", "Stripe"],
-    imageUrl: "https://i.imgur.com/6y9algm.png",
-    description:
-      "A modern and intuitive food ordering platform built with React.js and Node.js, featuring seamless online ordering, secure payment integration (Stripe), and real-time order tracking. Fully responsive across devices, the platform offers a user-friendly experience for both customers and restaurant admins.",
-  },
-];
+import { projects } from "@/config";
 
 const Myprojects = () => {
   const projectsRef = useRef(null);
@@ -91,9 +62,9 @@ const Myprojects = () => {
       </div>
       <div
         ref={projectsRef}
-        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4"
+        className="grid gap-y-7 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6"
       >
-        {Projects.map((project, index) => (
+        {projects.map((project, index) => (
           <motion.div
             variants={fadeIn("up", (index / 10) * 2)}
             initial="hidden"

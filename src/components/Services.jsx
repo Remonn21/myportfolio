@@ -56,7 +56,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div id="services">
+    <div id="services" className="py-10">
       <motion.div
         variants={fadeIn("down")}
         initial="hidden"

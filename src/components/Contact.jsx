@@ -28,13 +28,13 @@ const contactInfo = [
 
 const Contact = () => {
   return (
-    <div id="contact" className="flex flex-col gap-10 md:gap-5 md:flex-row">
+    <div id="contact" className="flex flex-col gap-10 pt-[10%] md:gap-5 md:flex-row">
       <motion.div
         variants={fadeIn("right")}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.3 }}
-        className="relative bg-[#27272cee]  p-6 order-2 md:order-none flex-1 rounded-md"
+        className="relative bg-[#27272cee]  p-6 order-2  md:order-none flex-1 rounded-md"
       >
         {/* <motion.div
           variants={fadeIn("down")}
