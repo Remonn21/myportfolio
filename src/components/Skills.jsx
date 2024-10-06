@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { BackgroundGradient } from "./ui/background-gradient";
 const Skills = () => {
   return (
-    <div id="skills" className="py-10 ">
+    <div id="skills" className="py-10 overflow-x-hidden sm:overflow-visible">
       <motion.div
         variants={fadeIn("down")}
         initial="hidden"
@@ -81,7 +81,7 @@ const Skills = () => {
         >
           <BackgroundGradient className="relative bg-tertiary rounded-[20px] py-7 flex flex-col  px-6 ">
             <h2 className="text-center h3 mb-10">Backend developer</h2>
-            <div className="grid grid-cols-2 gap-y-4 gap-x-2 overflow-hidden">
+            <div className="grid grid-cols-2 gap-y-4  overflow-hidden">
               {skills.backend.map((skill, index) => {
                 const SkillIcon = skill.icon;
                 return (
