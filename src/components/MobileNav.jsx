@@ -17,7 +17,7 @@ const MobileNav = ({ links }) => {
             offset={item.offset || 0}
             duration={500}
             activeClass="rounded-full bg-accent/80 active-link"
-            className="capitalize font-medium hover:text-accent-hover cursor-pointer
+            className="capitalize font-medium cursor-pointer
            transition-all flex flex-col items-center px-[10px] pt-1  "
           >
             <MobIcon className={`${item.iconClass ? item.iconClass : "text-xl"}`} />

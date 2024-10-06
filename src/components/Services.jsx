@@ -22,7 +22,7 @@ const services = [
     title: "Performance Optimization ",
 
     description:
-      " I optimize web applications for speed and efficiency, ensuring fast load times and smooth performance through code optimization, lazy loading, and more",
+      "I optimize web applications for speed and efficiency, ensuring fast load times and smooth performance through code optimization, lazy loading, and more",
     Icon: FaTachometerAlt,
   },
 ];
@@ -75,7 +75,7 @@ const Services = () => {
             initial="hidden"
             animate={isVisible ? "show" : "hidden"}
             viewport={{ once: false, amount: 0.2 }}
-            key={service}
+            key={service.title}
             className="flex"
           >
             <BackgroundGradient className="relative bg-tertiary rounded-[20px]  p-4 flex flex-col items-center">

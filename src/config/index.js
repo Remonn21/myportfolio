@@ -2,9 +2,11 @@ import { FaMobileAlt, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaNodeJs, FaReact, FaBolt } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandFramerMotion, TbBrandOauth } from "react-icons/tb";
-import {} from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 import { SiTypescript, SiJavascript, SiExpress, SiDocker } from "react-icons/si";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { MdMail } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
 
 export const stats = [
   {
@@ -75,5 +77,22 @@ export const projects = [
     imageUrl: "https://i.imgur.com/6y9algm.png",
     description:
       "A modern and intuitive food ordering platform built with React.js and Node.js, featuring seamless online ordering, secure payment integration (Stripe), and real-time order tracking. Fully responsive across devices, the platform offers a user-friendly experience for both customers and restaurant admins.",
+  },
+];
+export const contactInfo = [
+  {
+    icon: BsFillTelephoneFill,
+    title: "Phone",
+    content: "(+20) 127 215 7467",
+  },
+  {
+    icon: MdMail,
+    title: "Email",
+    content: "remon_ehab@hotmail.com",
+  },
+  {
+    icon: FaLocationDot,
+    title: "Addres",
+    content: "Benha, Egypt",
   },
 ];

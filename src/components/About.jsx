@@ -7,10 +7,22 @@ import Stats from "../components/Stats";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { TypeAnimation } from "react-type-animation";
+import { toast } from "sonner";
 const About = () => {
   const [ref, inView] = useInView({
     threshold: 0.5,
   });
+
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "myCV.pdf";
+    link.download = "RemonEhabCV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.info("downloading CV...");
+  };
+
   return (
     <section id="home" name="home" className="h-full">
       <motion.div
@@ -47,13 +59,14 @@ const About = () => {
             />
           </h2>
 
-          <p className="max-w-[500px] mb-9 text-white/90">
+          <p className="max-w-[500px] mb-9 leading-normal sm:leading-loose text-white/90">
             I build dynamic, high-performance web apps with clean code, scalable
             solutions, and user-friendly designs. With full-stack expertise, I bring ideas
             to life efficiently and innovatively.{" "}
           </p>
           <div className="flex flex-col md:flex-row items-center gap-8">
             <button
+              onClick={handleDownloadCV}
               className="px-5 py-1 bg-transparent text-accent rounded-full border border-accent flex items-center
                gap-2 uppercase hover:bg-accent hover:text-primary 
                hover:transition-all duration-500"

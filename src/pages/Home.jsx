@@ -6,7 +6,7 @@ import Skills from "@/components/Skills";
 
 const Home = () => {
   return (
-    <div className="flex flex-col gap-40">
+    <div className="flex flex-col gap-40 ">
       <About />
       <Skills />
       <Services />

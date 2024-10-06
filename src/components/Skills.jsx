@@ -32,27 +32,28 @@ const Skills = () => {
                 const SkillIcon = skill.icon;
                 return (
                   <motion.div
-                    initial={{ scale: 1 }}
+                    initial={{ scale: 1, opacity: 0 }}
                     whileInView={{
                       scale: [1, 1.3, 1],
+                      opacity: 1,
                       transition: {
                         duration: 0.4,
-                        delay: (index / 10) * 4 + 0.7,
+                        delay: (index / 10) * 4 + 0.4,
                         ease: [0.25, 0.25, 0.25, 0.75],
                       },
                     }}
                     viewport={{ once: false, amount: 0.2 }}
-                    key={skill}
+                    key={skill.name}
                     className="flex gap-2 "
                   >
                     <motion.div
                       initial={{ scale: 1, opacity: 0 }}
-                      animate={{
+                      whileInView={{
                         opacity: 1,
                         scale: [1, 1.3, 1],
                         transition: {
-                          duration: 0.6,
-                          delay: (index / 10) * 4 + 0.8,
+                          duration: 0.8,
+                          delay: (index / 10) * 4 + 0.5,
                           ease: [0.25, 0.25, 0.25, 0.75],
                         },
                       }}
@@ -85,27 +86,28 @@ const Skills = () => {
                 const SkillIcon = skill.icon;
                 return (
                   <motion.div
-                    initial={{ scale: 1 }}
+                    initial={{ scale: 1, opacity: 0 }}
                     whileInView={{
                       scale: [1, 1.3, 1],
+                      opacity: 1,
                       transition: {
                         duration: 0.4,
-                        delay: (index / 10) * 4 + 0.7,
+                        delay: (index / 10) * 4 + 0.4,
                         ease: [0.25, 0.25, 0.25, 0.75],
                       },
                     }}
                     viewport={{ once: false, amount: 0.2 }}
-                    key={skill}
+                    key={skill.name}
                     className="flex gap-2 "
                   >
                     <motion.div
                       initial={{ scale: 1, opacity: 0 }}
-                      animate={{
+                      whileInView={{
                         opacity: 1,
                         scale: [1, 1.3, 1],
                         transition: {
                           duration: 0.8,
-                          delay: (index / 10) * 4 + 0.8,
+                          delay: (index / 10) * 4 + 0.5,
                           ease: [0.25, 0.25, 0.25, 0.75],
                         },
                       }}

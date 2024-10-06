@@ -62,12 +62,13 @@ const Header = () => {
           } `}
         >
           <Nav links={links} />
-          <Link
-            to="/contact"
+          <a
+            target="_blank"
+            href="https://www.upwork.com/freelancers/~017a85ea02fbe8c573"
             className="px-5 py-1 bg-accent rounded-full hover:bg-accent-hover text-black"
           >
             Hire me
-          </Link>
+          </a>
         </div>
 
         {/* Mobile nav */}
