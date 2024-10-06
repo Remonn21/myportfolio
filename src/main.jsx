@@ -8,7 +8,9 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/myportfolio">
+    <BrowserRouter
+    // basename="/myportfolio"
+    >
       <App />
       <Toaster visibleToasts={1} duration={3000} position="top-right" richColors />
       <SpeedInsights />
